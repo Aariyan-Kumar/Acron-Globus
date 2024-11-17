@@ -1,9 +1,17 @@
-import React from "react"
+import React from "react";
+import { Outlet } from 'react-router-dom';
+import { Sidebar } from "./components/index";
+
 
 function App() {
   return (
     <>
-      <h1 className="text-center text-3xl text-blue-700"> hello world </h1>
+      <div>
+        <Sidebar />
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </>
   )
 }

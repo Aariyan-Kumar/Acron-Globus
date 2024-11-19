@@ -62,7 +62,7 @@ function Sidebar() {
                     <ul className='bg-[#fef4ec] text-justify py-3 px-10'>
                         <div className='flex'>
                             <img className='cursor-pointer w-5 mr-3 py-1' src={HomeIcon} alt="home icon" />
-                            <span className='cursor-pointer font-[550]'>Home</span>
+                            <span className='cursor-pointer font-semibold'>Home</span>
                         </div>
                     </ul>
                     <ul className='text-justify pt-5 px-10'>

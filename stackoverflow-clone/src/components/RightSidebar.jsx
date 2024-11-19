@@ -34,14 +34,14 @@ function RightSidebar() {
                             <li className='flex mx-auto py-2 px-6'>
                                 <img className='w-5 h-5 cursor-pointer' src={Pen} alt="" />
                                 <span>
-                                    <p className='pl-3 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>The unexpected benifits of mentoring others</p>
+                                    <p className='pl-3 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>The unexpected benifits of mentoring others</p>
                                 </span>
 
                             </li>
                             <li className='flex mx-auto py-2 px-6'>
                                 <img className='w-5 h-5 cursor-pointer' src={Pen} alt="" />
                                 <span>
-                                    <p className='pl-3 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>Podcast 354: Building for AR with Niantic Lab's augmented reality SDK</p>
+                                    <p className='pl-3 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>Podcast 354: Building for AR with Niantic Lab's augmented reality SDK</p>
                                 </span>
 
                             </li>
@@ -53,7 +53,7 @@ function RightSidebar() {
                             <li className='flex mx-auto py-2 px-6'>
                                 <img className='w-5 h-5 cursor-pointer' src={Logo} alt="" />
                                 <span>
-                                    <p className='pl-3 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>Beta realesed of Collectives&trade; on Stack Overflow</p>
+                                    <p className='pl-3 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>Beta realesed of Collectives&trade; on Stack Overflow</p>
                                 </span>
                             </li>
                         </ul>
@@ -66,21 +66,21 @@ function RightSidebar() {
                             <li className='flex mx-auto py-2 px-6'>
                                 <p className='w-5 h-5 text-sm cursor-pointer text-[#6b6b6b] font-semibold'>8</p>
                                 <span>
-                                    <p className='pl-3 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>Tags [driver] and [device-driver] appear to be redundant</p>
+                                    <p className='pl-3 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>Tags [driver] and [device-driver] appear to be redundant</p>
                                 </span>
 
                             </li>
                             <li className='flex mx-auto py-2 px-6'>
                                 <p className='w-5 h-5 text-sm cursor-pointer text-[#6b6b6b] font-semibold'>27</p>
                                 <span>
-                                    <p className='pl-3 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>How to handle dupes where A is closed as dup of B but I have an answer that...</p>
+                                    <p className='pl-3 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>How to handle dupes where A is closed as dup of B but I have an answer that...</p>
                                 </span>
 
                             </li>
                             <li className='flex mx-auto py-2 px-6'>
                                 <p className='w-5 h-5 text-sm cursor-pointer text-[#6b6b6b] font-semibold'>27</p>
                                 <span>
-                                    <p className='pl-3 py-1 text-[10px] cursor-pointer font-bold text-[#bdbbba]'>Ambiguous tag [contaniers]</p>
+                                    <p className='pl-3 py-1 text-[11px] cursor-pointer font-bold text-[#bdbbba]'>Ambiguous tag [contaniers]</p>
                                 </span>
 
                             </li>

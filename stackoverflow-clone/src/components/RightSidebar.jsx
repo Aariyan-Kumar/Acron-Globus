@@ -11,7 +11,7 @@ function RightSidebar() {
     return (
         <>
             <div className=' w-80'>
-                <div className='mt-16 ml-5 px-7'>
+                <div className='mt-20 ml-5 px-7'>
                     <ul className='flex justify-evenly '>
                         <li className='w-6'>
                             <img className='cursor-pointer' src={Message} alt="Message icon" />
@@ -27,7 +27,7 @@ function RightSidebar() {
                         </li>
                     </ul>
                 </div>
-                <div className='w-full min-h-60 bg-[#fdfcfa] mt-14'>
+                <div className='w-full min-h-60 bg-[#fdfcfa] mt-8'>
                     <h1 className='px-6 pt-7 text-xl font-[600] text-[#484848] tracking-wide'>The Overflow Blog</h1>
                     <div>
                         <ul>
@@ -90,7 +90,7 @@ function RightSidebar() {
                 <div>
                     <h1 className='px-6 pt-7 text-xl font-[600] text-[#484848] tracking-wide'>Customer filter</h1>
                     <div className='py-4 px-2'>
-                        <input type="text" id="first_name" class="bg-gray-50 border-2 rounded-sm border-gray-300 text-gray-900 text-sm block w-[87%] py-3 px-4 placeholder:text-blue-500 placeholder:text-[11px]" placeholder="add custom filters" required />
+                        <input type="text" id="first_name" className="bg-gray-50 border-2 rounded-sm border-gray-300 text-gray-900 text-sm block w-[87%] py-3 px-4 placeholder:text-blue-500 placeholder:text-[11px]" placeholder="add custom filters" required />
                     </div>
                 </div>
             </div>

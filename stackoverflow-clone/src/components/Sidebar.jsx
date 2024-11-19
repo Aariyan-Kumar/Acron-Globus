@@ -51,8 +51,8 @@ function Sidebar() {
 
     return (
         <>
-            <div className='border-2 border-transparent max-w-72 min-h-screen'>
-                <div className='max-w-[15rem] px-2 mx-7 my-10'>
+            <div className='border-2 border-transparent max-w-60 min-h-screen'>
+                <div className='max-w-[18rem] px-2 mx-7 my-16'>
                     <Link to="/">
                         <img src={SideLogo} alt="stackoverflow side logo" />
                     </Link>

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="bg-[#ffb901] py-16">
-      <div className="flex justify-between mx-24 bg-white min-h-[900px] rounded-3xl">
+      <div className="flex mx-24 bg-white min-h-[900px] rounded-3xl">
         <Sidebar />
         <main>
           <Outlet />

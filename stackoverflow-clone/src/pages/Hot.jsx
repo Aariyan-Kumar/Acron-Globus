@@ -2,9 +2,9 @@ import React from 'react'
 
 function Hot() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Hot</h1>
+    </>
   )
 }
 

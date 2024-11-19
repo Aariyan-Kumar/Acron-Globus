@@ -3,7 +3,7 @@ import React from 'react';
 function Bountied() {
     return (
         <>
-
+            <h1>Bountied</h1>
         </>
     )
 }

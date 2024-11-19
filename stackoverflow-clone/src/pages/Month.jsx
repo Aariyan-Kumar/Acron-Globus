@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function Month() {
     return (
         <>
-
+            <h1>Month</h1>
         </>
     )
 }

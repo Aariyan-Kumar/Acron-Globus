@@ -2,9 +2,9 @@ import React from 'react'
 
 function Week() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Week</h1>
+    </>
   )
 }
 

@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Card } from '../components/index';
+import { Service } from '../service/Service';
+
 
 function Week() {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    try {
+      Service.getWeekQuestion().then((data) => {
+        setQuestions(data.items);
+      })
+
+    } catch (error) {
+      console.log(error);
+
+    }
+  }, [])
+
+
   return (
     <>
-      <h1>Week</h1>
+      {questions.map((question) => (
+        <div key={question.question_id}>
+          <Card {...question} />
+        </div>
+      ))}
     </>
   )
 }

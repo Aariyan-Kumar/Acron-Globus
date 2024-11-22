@@ -1,26 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '../components/index';
 import { Service } from '../service/Service';
+import { BeatLoader } from 'react-spinners';
+
 
 
 function Month() {
     const [questions, setQuestions] = useState([]);
-    
-    useEffect(() => {
-        Service.getMonthQuestion().then((data) => {
-            setQuestions(data.items);
-        })
-    },[])
+    const [loading, setLoading] = useState(true);
 
-    return (
-        <>
-            {questions.map((question) => (
-                <div key={question.question_id}>
-                    <Card {...question} />
+
+    useEffect(() => {
+        Service.getMonthQuestion()
+            .then((data) => {
+                setQuestions(data.items);
+            }).finally(() => {
+                setLoading(false);
+            })
+    }, [])
+
+
+    if (!loading) {
+        return (
+            <>
+                {questions.map((question) => (
+                    <div key={question.question_id}>
+                        <Card {...question} />
+                    </div>
+                ))}
+            </>
+        )
+    } else {
+        return (
+            <>
+                <div className='flex justify-center items-center min-h-screen'>
+                    <BeatLoader
+                        color="#ff6d03"
+                        loading={loading}
+                        margin={10}
+                        size={20}
+                        speedMultiplier={1}
+                    />
                 </div>
-            ))}
-        </>
-    )
+            </>
+        )
+    }
 }
 
 export default Month

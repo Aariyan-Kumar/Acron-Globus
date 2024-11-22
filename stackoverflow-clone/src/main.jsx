@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'
-import App from './App.jsx'
+import './index.css';
+import App from './App.jsx';
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
-import { Bountied, Week, Hot, Month, Home, Interesting } from './pages/index.js';
+import { Bountied, Week, Hot, Month, Home, Interesting, Search } from './pages/index.js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +14,7 @@ const router = createBrowserRouter(
         <Route path='/hot' element={<Hot />} />
         <Route path='/week' element={<Week />} />
         <Route path='/month' element={<Month />} />
+        <Route path='/search' element={<Search />} />
       </Route>
     </Route>
   )
@@ -21,6 +22,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 )

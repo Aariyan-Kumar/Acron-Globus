@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchIcon from '../assets/search.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { Service } from '../service/Service';
+
 function Search() {
+
+    const [input, setInput] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        if (!input.trim()) {
+            alert('Please enter a search term!');
+            return;
+        }
+
+        Service.searchQuestion(input)
+            .then((data) => {
+                //Send the data.items to the '/search' page
+                if (data?.items?.length) {
+                    // Navigate to the search page with data
+                    navigate('/search', { state: { results: data.items } });
+                } else {
+                    alert('No results found!');
+                }
+            }).catch((error) => {
+                console.error('Error fetching search results:', error);
+                alert('Something went wrong!');
+            });
+
+    }
 
     const options = [
         {
@@ -34,11 +61,16 @@ function Search() {
                     <input
                         type="text"
                         id="filters"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
                         className="outline outline-2 outline-gray-200 rounded-full text-gray-700 text-sm block w-9/12 py-3 px-6 placeholder:text-[13px] placeholder:tracking-wider placeholder:font-semibold placeholder:text-[#ababab]"
                         placeholder="Search Your Answers Here..."
                         required
                     />
-                    <button className='w-7 relative -start-12'>
+                    <button
+                        onClick={handleSearch}
+                        className='w-7 relative -start-12'
+                    >
                         <img src={SearchIcon} alt="Search Icon" />
                     </button>
                     <div>

@@ -4,6 +4,7 @@ import Hot from "./Hot";
 import Week from "./Week";
 import Month from "./Month";
 import Interesting from "./Interesting";
+import Search from "./Search";
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Hot,
     Week,
     Month,
-    Interesting
+    Interesting,
+    Search
 }

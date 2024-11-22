@@ -4,6 +4,25 @@ const API_KEY = conf.apiKey;
 
 const Service = {
 
+    async searchQuestion(intitle) {
+        const URL = `https://api.stackexchange.com/2.3/search?pagesize=3&order=desc&sort=activity&intitle=${encodeURIComponent(intitle)}&site=stackoverflow&key=${API_KEY}`;
+        try {
+            const response = await fetch(URL, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.log("The error is in searching questions:", error);
+        }
+    },
+
     async getAllQuestion() {
         const URL = `https://api.stackexchange.com/2.3/questions?pagesize=3&order=asc&sort=activity&site=stackoverflow&key=${API_KEY}`;
         try {
